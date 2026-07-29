@@ -1,0 +1,58 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  @page { size: 1280px 640px; margin: 0; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{width:1280px;height:640px;background:#0b0e14;color:#e8ecf2;
+    font:400 17px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,system-ui,sans-serif;
+    overflow:hidden;position:relative}
+  /* order-book ladder motif, left rail */
+  .book{position:absolute;left:0;top:0;bottom:0;width:300px;display:flex;flex-direction:column;
+    justify-content:center;gap:5px;padding:0 44px;opacity:.95}
+  .row{display:flex;align-items:center;gap:10px;font:600 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+    letter-spacing:.04em}
+  .tick{width:26px;text-align:right;color:#5b6577;font-variant-numeric:tabular-nums}
+  .bar{height:11px;border-radius:2px}
+  .ask .bar{background:linear-gradient(90deg,#ff6b5e,#ff6b5e33)}
+  .bid .bar{background:linear-gradient(90deg,#3ddc97,#3ddc9733)}
+  .mid{display:flex;align-items:center;gap:10px;margin:7px 0;
+    font:700 11px/1 ui-monospace,Menlo,monospace;color:#7c88a0;letter-spacing:.16em}
+  .mid::after{content:"";flex:1;height:1px;background:#252b38}
+  main{position:absolute;left:340px;right:64px;top:0;bottom:0;display:flex;flex-direction:column;
+    justify-content:center;gap:0}
+  .eyebrow{font:700 13px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.2em;
+    text-transform:uppercase;color:#3ddc97;margin-bottom:22px}
+  h1{font:700 60px/1.03 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+    letter-spacing:-.028em;margin-bottom:20px}
+  h1 .dim{color:#8b94a7;font-weight:400}
+  p.sub{font-size:20px;line-height:1.45;color:#a8b1c2;max-width:660px;margin-bottom:34px}
+  .chips{display:flex;gap:10px;flex-wrap:wrap}
+  .chip{font:600 13.5px/1 -apple-system,system-ui,sans-serif;color:#c3cbd9;
+    border:1px solid #2b3242;background:#141926;border-radius:999px;padding:9px 15px}
+  .foot{position:absolute;left:340px;bottom:44px;font:600 14px/1 ui-monospace,Menlo,monospace;
+    color:#5b6577;letter-spacing:.05em}
+</style></head><body>
+  <div class="book">
+    <div class="row ask"><span class="tick">99</span><span class="bar" style="width:132px"></span></div>
+    <div class="row ask"><span class="tick">98</span><span class="bar" style="width:96px"></span></div>
+    <div class="row ask"><span class="tick">62</span><span class="bar" style="width:48px"></span></div>
+    <div class="row ask"><span class="tick">58</span><span class="bar" style="width:64px"></span></div>
+    <div class="mid">MID</div>
+    <div class="row bid"><span class="tick">54</span><span class="bar" style="width:70px"></span></div>
+    <div class="row bid"><span class="tick">51</span><span class="bar" style="width:42px"></span></div>
+    <div class="row bid"><span class="tick">03</span><span class="bar" style="width:104px"></span></div>
+    <div class="row bid"><span class="tick">01</span><span class="bar" style="width:150px"></span></div>
+  </div>
+  <main>
+    <div class="eyebrow">Orderbook Prediction Market Challenge</div>
+    <h1>Two-regime<br><span class="dim">market maker</span></h1>
+    <p class="sub">Exploit the extremes when the book empties; quote lean inside the spread when it doesn't. Tuned by multi-seed autoresearch, not a lucky seed.</p>
+    <div class="chips">
+      <span class="chip">Monopoly-extreme ladder</span>
+      <span class="chip">Volatility z-filter</span>
+      <span class="chip">Event-driven requoting</span>
+      <span class="chip">Held-out validation</span>
+    </div>
+  </main>
+  <div class="foot">github.com/rpinho/prediction-market-mm</div>
+</body></html>
