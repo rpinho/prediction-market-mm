@@ -2,7 +2,11 @@
 
 A passive market-making strategy for [Dan Robinson's Orderbook Prediction Market Challenge](https://github.com/danrobinson/prediction-market-challenge), plus the small autoresearch harness used to tune and robustness-check it.
 
-It scored **competitively on the live leaderboard — top-tier among honest single-submission entries** — from **one clean submission**, with a principled (non-overfit) configuration.
+One clean submission scored **+51.51 mean edge over 200 simulations**, rank 26 of the
+100-entry board on July 28, 2026, running the base configuration rather than a
+seed-tuned one. Some entries above it exploited the simulation engine; the best honest
+scores I could identify at the time were about 42. That is a snapshot of the board on
+one day, not its current state.
 
 ## The game
 
