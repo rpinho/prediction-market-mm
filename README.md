@@ -2,11 +2,12 @@
 
 A passive market-making strategy for [Dan Robinson's Orderbook Prediction Market Challenge](https://github.com/danrobinson/prediction-market-challenge), plus the small autoresearch harness used to tune and robustness-check it.
 
-One clean submission scored **+51.51 mean edge over 200 simulations**, rank 26 of the
-100-entry board on July 28, 2026, running the base configuration rather than a
-seed-tuned one. Some entries above it exploited the simulation engine; the best honest
-scores I could identify at the time were about 42. That is a snapshot of the board on
-one day, not its current state.
+One clean submission scored **+51.51 mean edge over 200 simulations**, rank 26 on the
+live top-100 leaderboard on July 28, 2026, running the base configuration rather than a
+seed-tuned one. That rank is a snapshot of the board on one day, not its current state.
+Some entries above it exploited the simulation engine. The April 2026 hackathon's honest
+final ranking, rescored on fresh seeds, topped out at 42.32. That is a different protocol
+from the live board, so the two numbers do not compare.
 
 ## The game
 
